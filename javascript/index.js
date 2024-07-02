@@ -53,4 +53,5 @@ const optional = "color, colour";
 console.log(optional.match(/colou?r/g));
 //response 'color', 'colour'
 
-
+const firstLetter = "o teste";
+console.log(firstLetter.match(/^\w+/g));
