@@ -54,4 +54,17 @@ console.log(optional.match(/colou?r/g));
 //response 'color', 'colour'
 
 const firstLetter = "o teste";
-console.log(firstLetter.match(/^\w+/g));
+console.log(firstLetter.match(/^\w/g));
+//response 'o'
+
+const tokens = "He is a very very good boy, isn't he?";
+console.log(tokens.match(/[A-Za-z!,?._'@]+/g));
+//response [ 'He','is','a','very','very', 'good', 'boy,', "isn't",'he?']
+
+const vowelBegin = "css eight inner out ugly pass ama";
+console.log(vowelBegin.match(/(^[aeiou](\w+))|\s[aeiou](\w+)/g));
+//response [ ' eight', ' inner', ' out', ' ugly', ' ama' ]
+
+const vowelEnd = "casa die abacaxi ovo urubu pass ama";
+console.log(vowelEnd.match(/\s?(\w+)[aeiou](\s|$)/g));
+//response [ 'casa ', 'die ', 'abacaxi ', 'ovo ', 'urubu ', ' ama' ]
